@@ -1,0 +1,33 @@
+name: SSM-POC CI
+
+on:
+  workflow_dispatch:        # allows manual run from the Actions tab
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  run-scenarios:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run all scenarios (capture log)
+        run: |
+          set -e
+          python --version
+          python scripts/run_all.py | tee runlog.txt
+
+      - name: Upload run log (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ssm-poc-runlog
+          path: runlog.txt
+          if-no-files-found: error
