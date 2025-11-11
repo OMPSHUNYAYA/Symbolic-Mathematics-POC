@@ -2,6 +2,8 @@
 
 **A scripts-first comparison showing `m` unchanged via `phi((m,a)) = m`, with a lightweight posture lane `a` in `(-1,+1)`.**
 
+![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue?style=flat&logo=creative-commons) ![GitHub Stars](https://img.shields.io/github/stars/OMPSHUNYAYA/Symbolic-Mathematics-POC?style=flat&logo=github) ![CI](https://github.com/OMPSHUNYAYA/Symbolic-Mathematics-POC/actions/workflows/ssm-poc-ci.yml/badge.svg)
+
 **Potential Impact (Observation-Only)**
 
 Everyday numbers can tell you how they’re behaving, not just what they are. By extending classical values with a bounded alignment lane `a` in `(-1,+1)`, SSM keeps the usual results intact while adding a gentle, human-readable sense of posture (stable, drifting, unreliable). In practical, non-technical terms, this can support:
